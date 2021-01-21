@@ -1,0 +1,28 @@
+<div *ngIf="!showBlogCreate">
+    <button mat-raised-button color="accent" (click)="openCreateBlog()">Create BlogS</button>
+
+<mat-card class="example-card" *ngFor="let blog of blogDetails">
+    <h1>{{ blog.blogTitle }}</h1>
+    <mat-card-header>       
+      <div fxLayout="row" fxLayoutGap="10vw">        
+        <div fxLayoutAlign="end end" fxLayoutGap="1vw">
+            <mat-icon color="primary" (click)="editBlog(blog)" class="mat-icon">mode_edit</mat-icon>
+            <mat-icon color="warn" (click)="deleteBlog()" class="mat-icon">delete</mat-icon>
+        </div>
+    </div>
+    </mat-card-header>
+    <img mat-card-image  [src]="blog.blogImage">
+    <mat-card-content>
+        <p>
+            {{ blog.blogDesc }}
+        </p>
+      </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="addLike()">LIKE</button>
+      <button mat-raised-button color="accent" >SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div *ngIf="showBlogCreate">
+    <app-blog-create [selectedBlog]="selectedBlog" [showBlogCreate]="showBlogCreate"></app-blog-create>
+</div>  

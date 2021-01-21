@@ -1,0 +1,42 @@
+<div fxLayoutAlign="center center" fxLayoutGap="2vw">
+    <form [formGroup]="userForm">
+        <div class="form-group">        
+            <div fxLayout="row" fxLayoutGap="2vw">
+                <label class="label asterisk_input">Title</label>
+                <mat-form-field appearance="outline">
+                    <mat-label>Title</mat-label>
+                    <input
+                    formControlName="title"
+                    type="text"
+                    id="title"
+                    matInput
+                    maxlength="30"
+                    required
+                    >
+                </mat-form-field>
+            </div>            
+            <div class="form-group">
+                <label for="file">File</label>
+                <input 
+                    formControlName="file"
+                    id="file" 
+                    type="file" 
+                    class="form-control"
+                    (change)="onFileChange($event)">                
+            </div>
+            <div fxLayout="row" fxLayoutGap="2vw">
+                <label class="label asterisk_input">Description</label>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your description</mat-label>
+                    <textarea 
+                    matInput 
+                    formControlName="description"
+                    required></textarea>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)="submitBlog()">Save Blog</button>
+        </div>
+    </form>
+</div>

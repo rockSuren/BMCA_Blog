@@ -1,0 +1,36 @@
+
+    <form [formGroup]="loginForm">
+        <div class="form-group">        
+            <div fxLayout="row" fxLayoutGap="2vw">
+                <label class="label asterisk_input">UserName</label>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter UserName</mat-label>
+                    <input
+                    formControlName="userName"
+                    type="text"
+                    id="userName"
+                    matInput
+                    maxlength="30"
+                    required
+                    >
+                </mat-form-field>
+            </div>
+            <div fxLayout="row" fxLayoutGap="2vw">
+                <label class="label asterisk_input">Passowrd</label>
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input
+                    formControlName="passowrd"
+                    type="text"
+                    id="passowrd"
+                    matInput
+                    maxlength="30"
+                    required
+                    >
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <button mat-raised-button color="primary" (click)="doLogin()">Login</button>
+        </div>
+    </form>

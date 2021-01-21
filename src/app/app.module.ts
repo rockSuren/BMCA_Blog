@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AdminComponent } from './admin/admin.component';
 import { BlogCreateComponent } from './blog-create/blog-create.component';
 import { BlogViewComponent } from './blog-view/blog-view.component';
 import { ErrorComponent } from './error/error.component';
@@ -26,7 +25,6 @@ import { BlogService } from '../app/service/blog.service';
 @NgModule({
   declarations: [
     AppComponent,
-    AdminComponent,
     BlogCreateComponent,
     BlogViewComponent,
     ErrorComponent,

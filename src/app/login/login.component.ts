@@ -20,11 +20,11 @@ export class LoginComponent implements OnInit {
   doLogin(){
     this.loginSrv.validateLogin(this.loginForm.get('userName').value,this.loginForm.get('passowrd').value).
     subscribe(result => {
-      if(result.user && result.userInd === 1){
-        this.route.navigate(['/admin']);
+      if(result.user && result.userInd === 1){       
+        this.loginSrv.isAdminUser = 1;
       }
       else if(result.user && result.userInd === 2){
-        this.route.navigate(['/user']);
+        this.loginSrv.isAdminUser = 2;
       }
       else {
         this.route.navigate(['/error']);

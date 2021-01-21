@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class BlogCreateComponent implements OnInit {
   userForm = new FormGroup({
     title : new FormControl('',[Validators.required]),
-    file : new FormControl('',[Validators.required]),
+    file : new FormControl(''),
     description : new FormControl('',[Validators.required])
   });
   imageSrc: string;

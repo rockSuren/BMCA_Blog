@@ -6,7 +6,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LoginService {
-
+isAdminUser : number = 0;
+isUser : number = 0;
   constructor(private http : HttpClient) { }
 
   validateLogin(userName: string, password: string) : Observable<any>{       
